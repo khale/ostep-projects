@@ -91,8 +91,9 @@ infrastructure does the rest.
 ## Code Overview
 
 We give you here the
-[`mapreduce.h`](https://github.com/remzi-arpacidusseau/ostep-projects/tree/master/concurrency-mapreduce/mapreduce.h)
-header file that specifies exactly what you must build in your MapReduce library:
+[`mapreduce.h`](https://github.com/khale/ostep-projects/tree/master/concurrency-mapreduce/mapreduce.h)
+header file that specifies exactly what you must build in your MapReduce library, and
+an empty `mapreduce.c` file which should implement everything:
 
 ```
 #ifndef __mapreduce_h__
@@ -265,16 +266,22 @@ Here are a few things to consider in your implementation:
 
 ## Grading
 
-Your code should turn in `mapreduce.c` which implements the above functions
-correctly and efficiently. It will be compiled with test applications with the
-`-Wall -Werror -pthread -O` flags; it will also be valgrinded to check for
-memory errors.
+Your submission will be graded based on your implementation in `mapreduce.c`
+which should implement the above functions correctly and efficiently. It will
+be compiled with our test applications with the `-Wall -Werror -pthread -O`
+flags; it will also be valgrinded to check for memory errors.
 
 Your code will first be measured for correctness, ensuring that it performs
 the maps and reductions correctly. If you pass the correctness tests, your
 code will be tested for performance; higher performance will lead to better
 scores.
 
+## Testing
 
+Note that we have not provided you with any tests this time. You should write your 
+own tests! A good one to start with would be the wordcount example above. You
+should definitely add some other tests though, and feel free to submit them along
+with your final work! Feel free to add targets to the `Makefile` to compile your
+tests easily. 
 
-
+Good luck!
